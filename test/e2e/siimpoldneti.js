@@ -5,7 +5,7 @@ module.exports = {
   before(browser) {
     browser.resizeWindow(1000, 1000);
   },
-  'Siim Poldmaaa Neti': function (browser) {
+  'Siim Poldmaaa Neti': function(browser) {
     browser
       .url('https://www.neti.ee/ssoauth/')
       .waitForElementVisible('body')

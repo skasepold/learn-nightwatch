@@ -1,16 +1,24 @@
 root: true
 
+plugins:
+  - prettier
+
 extends:
   - eslint-config-airbnb-base
+  - prettier
 
 env:
   node: true
 
 rules:
   no-console: off
+  linebreak-style: off
 
   # fix later
   func-names: off
+
+  # use prettier
+  prettier/prettier: error
 
 globals:
   fetch: true

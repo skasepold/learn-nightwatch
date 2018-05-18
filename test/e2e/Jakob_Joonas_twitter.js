@@ -2,9 +2,10 @@ const config = require('../../nightwatch.conf.js');
 
 const d = new Date();
 const time = `${d.toLocaleDateString()} kell: ${d.toLocaleTimeString()}`;
-module.exports = { // addapted from: https://git.io/vodU0
+module.exports = {
+  // addapted from: https://git.io/vodU0
   '@tags': ['twitter'],
-  'Login to twitter': function (browser) {
+  'Login to twitter': function(browser) {
     browser
       .url('https://twitter.com/login?lang=en')
       .pause(1000)

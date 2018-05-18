@@ -19,7 +19,9 @@ if (process.env.TRAVIS !== 'true') {
   uploadPath += `/local/${+new Date()}`;
 } else {
   // is ci
-  uploadPath += `/ci/${process.env.TRAVIS_EVENT_TYPE}/${process.env.TRAVIS_BRANCH}/${process.env.TRAVIS_BUILD_ID}`;
+  uploadPath += `/ci/${process.env.TRAVIS_EVENT_TYPE}/${
+    process.env.TRAVIS_BRANCH
+  }/${process.env.TRAVIS_BUILD_ID}`;
 }
 
 console.log('uploadPath', uploadPath);
@@ -34,11 +36,15 @@ function upload(filename) {
     }
 
     // This uploads basic.js to the root of your dropbox
-    dbx.filesUpload({ path: `${uploadPath}/${path.basename(filename)}`, contents })
-      .then((response) => {
+    dbx
+      .filesUpload({
+        path: `${uploadPath}/${path.basename(filename)}`,
+        contents,
+      })
+      .then(response => {
         console.log(response);
       })
-      .catch((err2) => {
+      .catch(err2 => {
         console.log(err2);
       });
   });

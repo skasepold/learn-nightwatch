@@ -1,8 +1,9 @@
 const config = require('../../nightwatch.conf.js');
 
-module.exports = { // addapted from: https://git.io/vodU0
+module.exports = {
+  // addapted from: https://git.io/vodU0
   '@tags': ['google'],
-  'Open google': function (browser) {
+  'Open google': function(browser) {
     // load google
     browser
       .url('https://www.google.ee/')

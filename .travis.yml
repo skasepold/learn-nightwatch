@@ -31,7 +31,7 @@ before_script:
 
 script:
   - npm run lint
-  - npm test test/e2e/google.js
+  - npm test
   - ls -l screenshots
   - ls -l screenshots/*/*
   - node test/e2e-ignore/dropbox.js

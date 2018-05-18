@@ -1,0 +1,16 @@
+root: true
+
+extends:
+  - eslint-config-airbnb-base
+
+env:
+  node: true
+
+rules:
+  no-console: off
+
+  # fix later
+  func-names: off
+
+globals:
+  fetch: true

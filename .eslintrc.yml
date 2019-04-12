@@ -15,3 +15,5 @@ rules:
   global-require: off
   no-template-curly-in-string: off
   no-plusplus: off
+  # to avoid windows vs unix conflicts
+  linebreak-style: off

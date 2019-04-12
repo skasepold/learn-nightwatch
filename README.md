@@ -97,6 +97,12 @@ npm test
 
 # or run specific test with 
 npm test -- test/e2e/github.js
+
+
+# this project also has eslint setup, run linter
+npm run lint
+# autfix with eslint
+npm run lint -- --fix
 ```
 
 

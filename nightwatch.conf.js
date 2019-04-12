@@ -1,4 +1,7 @@
-require('env2')('.env'); // optionally store your environment variables in .env
+if (require('fs').existsSync('.env')) {
+  require('env2')('.env'); // optionally store your environment variables in .env
+}
+
 const seleniumServer = require("selenium-server");
 const chromedriver = require("chromedriver");
 const PKG = require('./package.json'); // so we can get the version of the project

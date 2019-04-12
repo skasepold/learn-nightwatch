@@ -72,7 +72,7 @@ _**Try it**_ on your local machine in 5 mins by following these _**3 easy steps*
 Clone the repository by _copy-pasting_ the following command into your terminal:
 
 ```sh
-git clone https://github.com/dwyl/learn-nightwatch.git && cd learn-nightwatch && cp sample.env .env
+git clone https://github.com/eritikass/learn-nightwatch.git && cd learn-nightwatch
 ```
 
 > Note: if you're _curious_ what that last part is, see: https://github.com/dwyl/env2
@@ -86,6 +86,7 @@ including Selenium Server and `chromedriver`:
 npm install
 ```
 
+> NB: you need to have [nodejs](https://nodejs.org/en/download/) and [java](https://www.java.com/en/download/) installed locally...
 
 ### 3. Run (_tests_)<sup>2</sup>
 
@@ -93,6 +94,9 @@ Run the Nightwatch tests:
 
 ```sh
 npm test
+
+# or run specific test with 
+npm test -- test/e2e/github.js
 ```
 
 
